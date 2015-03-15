@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CrowdSmile | Home</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/hover.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Sally Blocks Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>						
+
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+ 	<style>
+.div_text_shadow 
+{
+color: rgb(255, 145, 145);
+text-shadow: rgb(3, 3, 3) 2px 2px 4px;
+}
+
+.team-grids img{
+	position: relative;
+	left:14px;
+	border-radius: 50%;
+}
+
+.copy-right{
+	padding-top:0;
+}
+
+.top-menu{
+}
+
+.team-grid{
+
+}
+ 	</style>
+
+</head>
+<body>
+<!---->
+<div id="home" class="banner">
+	 <div class="container">
+		 <div class="col-md-6 banner-info">
+			 <div class="logo">
+				 <a href="#home"><img src="images/logo.png" alt=""/></a>
+			 </div>			 
+			 <!-- start slider -->			 
+			 <div class="flexslider">
+				 <ul class="slides">
+					 <li>
+						 <div class="tittle">
+							 <h1 class="div_text_shadow">CrowdSmile</h1>
+								<p class="div_text_shadow">If you are feeling down we have a special greeting for you. Just tell us your location and we'll take care of the rest. Our crowd will record a unique message for you to brighten your day. Or be part of the crowd and sing, beatbox, and play the drums for us!</p>
+							  <a class="hvr-shutter-in-horizontal" href="#"><img width="24" style="position:relative; top:-2px; left:-4px;"src="images/store.png" />Get it on the Play Store</a>
+
+						</div>
+					  </li>	
+				  </ul>
+			 </div>
+			  <!-- end slider -->			
+		 </div>		 
+		 <div class="col-md-6 banner-pic">
+			 <img src="images/phone.png" alt=""/>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div class="navigation">	 
+	 <div class="container">
+	     <div class="fixed-header">
+			 <div class="nav-logo">
+				 <a class="scroll" href="#home"><img src="images/nav-logo.png" alt=""/></a>
+			 </div>
+			 <div class="top-menu">
+					<span class="menu"> </span>
+				 <nav class="cl-effect-21">
+					<ul class="top-menu2">
+						<li><a class="scroll" href="#home">HOME</a></li>
+						<li><a class="scroll" href="#about">ABOUT</a></li>
+						<li><a class="scroll" href="#team">TEAM</a></li>			
+						<li><a class="scroll" href="#contact">CONTACT US</a></li>
+					</ul>
+				</nav>		
+				</div>
+				<script>
+			$("span.menu").click(function(){
+				$(".top-menu ul").slideToggle(500, function(){
+				});
+			});
+			</script>
+
+				<!-- script for menu -->
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+
+				<!-- script for menu -->
+				<script>
+			 $(document).ready(function() {
+				 var navoffeset=$(".navigation").offset().top;
+				 $(window).scroll(function(){
+					var scrollpos=$(window).scrollTop(); 
+					if(scrollpos >=navoffeset){
+						$(".navigation").addClass("fixed");
+					}else{
+						$(".navigation").removeClass("fixed");
+					}
+				 });
+				 
+			 });
+			 </script>
+
+		 </div>
+	 </div>
+</div>
+<!---->
+<!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+							  <script type="text/javascript">
+								$(function(){
+								  SyntaxHighlighter.all();
+								});
+								$(window).load(function(){
+								  $('.flexslider ').flexslider({
+									animation: "slide",
+									start: function(slider){
+									  $('body').removeClass('loading');
+									}
+								  });
+								});
+							  </script>
+<!---->
+
+<!---->
+<div id="team" class="team">
+	 <div class="container">
+		 <div class="team-info">
+			 <h3>Our awesome team</h3>
+			 <p>We believe in a diverse range of personel to bring creative skills, thoughts, and ideas to the table. Be cool, we awesome, be with us today, really ok?</p>
+		 </div>
+		 <div class="team-grids">
+			 <div class="col-md-3 team-grid">
+				 <a href="#"><img src="images/man1.jpg" alt=""/></a>
+				 <h3>Brad Gray</h3>
+				 <h5>Data Analyst</h5>
+				 <div class="caption">
+					
+				 </div>
+			 </div>
+			 <div class="col-md-3 team-grid">
+				 <a href="#"><img src="images/man2.jpg" alt=""/></a>
+				 <h3>Atanas Penchev</h3>
+				 <h5>Software Developer</h5>
+				 <div class="caption">
+					 
+				 </div>
+			 </div>
+			 <div class="col-md-3 team-grid">
+				 <a href="#"><img src="images/man3.jpg" alt=""/></a>
+				 <h3>Josh Xiao</h3>
+				 <h5>Project Manager</h5>
+				 <div class="caption"> </div>
+			 </div>
+			 <div class="col-md-3 team-grid">
+				 <a href="#"><img src="images/man4.jpg" alt=""/></a>
+				 <h3>Ian Denev</h3>
+				 <h5>Branding Specialist</h5>
+				 <div class="caption">
+					 
+				 </div>
+			 </div>
+		 </div>
+	 </div>	
+</div>
+<!---->
+
+
+
+<div class="copy-right">
+	 <p>Copyrights &copy; 2015 Hack the Burgh | All rights reserved</a></p>
+</div>
+<!---->
+<div id="short" class="fotter">
+	 <div class="container">
+		 <div class="col-md-7 short-codes-left">
+			 <div class="ftr-pic">
+				 <img src="images/ftr-logo.png" alt=""/>
+			 </div>
+			 <div class="ftr-info">
+				 <p>Be sure to take a look to our</p>
+				 <p><a href="#">Terms of Use</a> and <a href="#"> Privacy Policy</a></p>
+			 </div>
+			 
+		 </div>
+		 <div class="col-md-5 short-codes-right">
+			 <span class="sc3"><a class="hvr-shutter-in-horizontal" href="#"><img width="24" style="position:relative; top:-2px; left:-4px;"src="images/store.png" />Get it on the Play Store</a></span>
+		 </div>
+	 </div>
+</div>
