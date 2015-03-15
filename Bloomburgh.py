@@ -16,9 +16,9 @@ citydict={'Liverpool':['UKEW322 Index', 'UKURLL Index','WEUKEGGP Index','UKX Ind
 'Manchester':['UKEW299 Index', 'UKURME Index','WEUKEGCC Index','UKX Index','SX5E Index','CCMP Index','INDU Index','SPX Index']}
 
 
-def request(args, data):
+def request(data):
     str=''
-    req = urllib.request.Request('https://{}/request?ns=blp&service=refdata&type=HistoricalDataRequest'.format(args.host))
+    req = urllib.request.Request('https://{}/request?ns=blp&service=refdata&type=HistoricalDataRequest'.format('http-api.openbloomberg.com'))
     req.add_header('Content-Type', 'application/json')
 
     ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
@@ -150,7 +150,7 @@ def analyseStockdata(str):
     return result
 
 
-def cityanalysis(args,cityname):
+def cityanalysis(cityname):
     percentage=0.0
     if cityname in citydict:
         salarydata = {
@@ -161,7 +161,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "YEARLY"
         }
         
-        str=request(args, salarydata)
+        str=request(salarydata)
         percentage=percentage+0.3*analyseSalarydata(str)
         
         unemploymentdata = {
@@ -171,7 +171,7 @@ def cityanalysis(args,cityname):
             "endDate": "20080301",
             "periodicitySelection": "YEARLY"
         }
-        str=request(args, unemploymentdata)
+        str=request(unemploymentdata)
         percentage=percentage+0.4*analyseUnemploymentdata(str)
         
         weatherdata = { 
@@ -182,7 +182,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, weatherdata)
+        str=request(weatherdata)
         percentage=percentage+0.25*analyseWeatherdata(str)
         
         stock1data = {
@@ -193,7 +193,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, stock1data)
+        str=request(stock1data)
         percentage=percentage+0.1*analyseStockdata(str) 
         
         stock2data = {
@@ -204,7 +204,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, stock2data)
+        str=request(stock2data)
         percentage=percentage+0.05*analyseStockdata(str)     
 
         stock3data = {
@@ -215,7 +215,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, stock3data)
+        str=request(stock3data)
         percentage=(percentage+0.005*analyseStockdata(str))
         
         stock4data = {
@@ -226,7 +226,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, stock4data)
+        str=request(stock4data)
         percentage=percentage+0.005*analyseStockdata(str) 
         
         stock5data = {
@@ -237,7 +237,7 @@ def cityanalysis(args,cityname):
             "periodicitySelection": "DAILY"
         }
         
-        str=request(args, stock5data)
+        str=request(stock5data)
         percentage=percentage+0.005*analyseStockdata(str) 
         
     # print(percentage)
@@ -247,8 +247,10 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('host', type=str)
+
+    parser = 'http-api.openbloomberg.com';
     
-    return cityanalysis(parser.parse_args(),'Newcastle')
+    return cityanalysis('Newcastle')
 
     
 
