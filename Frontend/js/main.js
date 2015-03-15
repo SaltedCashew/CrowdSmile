@@ -1,5 +1,5 @@
-angular.module('app', []).controller('smile', ['$scope', function($scope) {
-  $http.get('http://exodia.ngrok.com/getsmile').
+angular.module('app', []).controller('smile', ['$scope', '$http', function($scope, $http) {
+  $http.get('http://crowdsmile.ngrok.com/getsmile').
   success(function(data, status, headers, config) {
     $scope.room = data;
   }).
