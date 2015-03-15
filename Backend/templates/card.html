@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div id="controls">
+	<img
+		id="record"
+		src="http://webaudiodemos.appspot.com/AudioRecorder/img/mic128.png" onclick="toggleRecording(this);"
+	>
+</div>
+
+
+<script>var staticURL = '{{ url_for("static", filename="js") }}';</script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="{{ url_for('static', filename='js/recorder.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
