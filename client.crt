@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 5418 (0x152a)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=NY, L=New York, O=Bloomberg LP, OU=CTO Office, CN=Bloomberg LP CA/emailAddress=open-tech@bloomberg.net
+        Validity
+            Not Before: Mar 13 06:00:00 2015 GMT
+            Not After : Mar 17 06:00:00 2015 GMT
+        Subject: C=US, ST=NY, L=New York, O=Bloomberg LP, OU=CTO Office, CN=hack_the_burgh_spring_2015_005/emailAddress=open-tech@bloomberg.net
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:b5:01:58:4d:7b:f3:51:86:7c:22:eb:75:ee:5d:
+                    47:37:5d:b9:b7:e9:15:69:6a:09:78:16:d3:49:d8:
+                    e0:13:42:0a:15:5c:7f:db:7e:69:0c:a9:54:df:51:
+                    e9:c6:e1:ef:be:72:c3:01:8e:c5:36:11:04:f0:5e:
+                    13:8b:28:88:d3:18:0d:07:27:78:bb:02:39:ba:f5:
+                    49:c4:04:56:a5:32:6c:1f:04:ad:ca:04:55:c8:95:
+                    c1:9e:af:18:c2:87:31:a0:a7:ff:17:5f:41:4a:2d:
+                    0f:40:ac:21:df:ed:61:c3:57:95:fb:01:53:58:40:
+                    e7:fd:7c:4c:dc:c6:e3:5d:55
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                FC:56:D5:C2:FC:96:AD:F5:AA:2E:86:FF:3D:B1:05:1D:F9:DB:8B:2B
+            X509v3 Authority Key Identifier: 
+                keyid:F3:21:76:1F:DA:B5:E7:03:FC:ED:D7:71:B8:1C:55:2D:7E:65:5F:14
+                DirName:/C=US/ST=NY/L=New York/O=Bloomberg LP/OU=CTO Office/CN=Bloomberg LP CA/emailAddress=open-tech@bloomberg.net
+                serial:81:F3:7A:1C:BC:C6:E8:A2
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        6b:ed:78:0e:23:d0:bc:16:f2:08:a6:4d:7e:6f:20:c8:0b:82:
+        92:53:5e:ec:d5:41:6b:a1:1e:32:dd:0a:2a:57:c2:29:01:19:
+        55:26:77:f2:d9:77:c4:57:af:ca:7e:68:19:8e:a0:ca:43:d3:
+        2e:f7:c4:f4:43:cd:82:8c:0c:5b:4a:d5:af:8c:d2:33:46:0d:
+        c8:3c:4e:f2:0e:75:24:26:b3:81:74:58:3e:71:ff:85:9b:a7:
+        21:ca:de:6b:bd:68:1d:67:51:8a:46:74:99:13:16:fb:69:19:
+        9e:4b:40:8e:e8:92:35:08:18:13:f9:f7:0a:5c:5e:4c:a5:ec:
+        a5:03
+-----BEGIN CERTIFICATE-----
+MIIEEjCCA3ugAwIBAgICFSowDQYJKoZIhvcNAQEFBQAwgZsxCzAJBgNVBAYTAlVT
+MQswCQYDVQQIEwJOWTERMA8GA1UEBxMITmV3IFlvcmsxFTATBgNVBAoTDEJsb29t
+YmVyZyBMUDETMBEGA1UECxMKQ1RPIE9mZmljZTEYMBYGA1UEAxMPQmxvb21iZXJn
+IExQIENBMSYwJAYJKoZIhvcNAQkBFhdvcGVuLXRlY2hAYmxvb21iZXJnLm5ldDAe
+Fw0xNTAzMTMwNjAwMDBaFw0xNTAzMTcwNjAwMDBaMIGqMQswCQYDVQQGEwJVUzEL
+MAkGA1UECBMCTlkxETAPBgNVBAcTCE5ldyBZb3JrMRUwEwYDVQQKEwxCbG9vbWJl
+cmcgTFAxEzARBgNVBAsTCkNUTyBPZmZpY2UxJzAlBgNVBAMUHmhhY2tfdGhlX2J1
+cmdoX3NwcmluZ18yMDE1XzAwNTEmMCQGCSqGSIb3DQEJARYXb3Blbi10ZWNoQGJs
+b29tYmVyZy5uZXQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALUBWE1781GG
+fCLrde5dRzddubfpFWlqCXgW00nY4BNCChVcf9t+aQypVN9R6cbh775ywwGOxTYR
+BPBeE4soiNMYDQcneLsCObr1ScQEVqUybB8ErcoEVciVwZ6vGMKHMaCn/xdfQUot
+D0CsId/tYcNXlfsBU1hA5/18TNzG411VAgMBAAGjggFSMIIBTjAJBgNVHRMEAjAA
+MC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUw
+HQYDVR0OBBYEFPxW1cL8lq31qi6G/z2xBR3524srMIHQBgNVHSMEgcgwgcWAFPMh
+dh/atecD/O3XcbgcVS1+ZV8UoYGhpIGeMIGbMQswCQYDVQQGEwJVUzELMAkGA1UE
+CBMCTlkxETAPBgNVBAcTCE5ldyBZb3JrMRUwEwYDVQQKEwxCbG9vbWJlcmcgTFAx
+EzARBgNVBAsTCkNUTyBPZmZpY2UxGDAWBgNVBAMTD0Jsb29tYmVyZyBMUCBDQTEm
+MCQGCSqGSIb3DQEJARYXb3Blbi10ZWNoQGJsb29tYmVyZy5uZXSCCQCB83ocvMbo
+ojATBgNVHSUEDDAKBggrBgEFBQcDAjALBgNVHQ8EBAMCB4AwDQYJKoZIhvcNAQEF
+BQADgYEAa+14DiPQvBbyCKZNfm8gyAuCklNe7NVBa6EeMt0KKlfCKQEZVSZ38tl3
+xFevyn5oGY6gykPTLvfE9EPNgowMW0rVr4zSM0YNyDxO8g51JCazgXRYPnH/hZun
+Icrea71oHWdRikZ0mRMW+2kZnktAjuiSNQgYE/n3ClxeTKXspQM=
+-----END CERTIFICATE-----
