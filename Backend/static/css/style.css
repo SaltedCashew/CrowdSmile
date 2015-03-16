@@ -14,3 +14,7 @@ body {
 #record.recording {
     opacity: 1;
 }
+
+.padding {
+	padding: 0 15px;
+}

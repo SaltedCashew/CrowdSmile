@@ -7,6 +7,9 @@
 <body>
 
 <div id="controls">
+	{% for file in files %}
+		<a href="{{ url_for('static', filename='cards/' + id + '/' + file) }}">{{ file }}</a>
+	{% endfor %}
 	<img
 		id="record"
 		src="http://webaudiodemos.appspot.com/AudioRecorder/img/mic128.png" onclick="toggleRecording(this);"

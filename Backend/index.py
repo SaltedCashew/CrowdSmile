@@ -55,7 +55,12 @@ def get_happines(city):
 # Home page
 @app.route('/')
 def hello():
-    return 'Hello, Flask!'
+    directory = 'cards'
+    f = []
+    for (dirpath, dirnames, filenames) in walk(directory):
+        f.extend(dirnames)
+        break
+    return render_template('rooms.html', dirs=f)
 
 
 # Create a new card
@@ -74,7 +79,7 @@ def smile():
 # Get the new card's id
 @app.route('/getsmile')
 def getsmile():
-    directory = 'cards'
+    directory = 'static/cards'
     f = []
     for (dirpath, dirnames, filenames) in walk(directory):
         f.extend(dirnames)
@@ -86,7 +91,7 @@ def getsmile():
 # Show the card with the ability to record
 @app.route('/<int:card_id>')
 def show_card(card_id):
-    directory = 'cards/' + str(card_id)
+    directory = 'static/cards/' + str(card_id)
     print directory
     if not exists(directory):
         print 'Directory', directory, 'does not exist yet.'
@@ -102,14 +107,14 @@ def show_card(card_id):
     if len(f) >= 3:
         return 'Card is already completed'
     else:
-        return render_template('card.html', directory=directory)
+        return render_template('card.html', files=f, id=str(card_id))
 
     return 'OK'
 
 
 @app.route('/play/<card_id>', methods=['GET', 'POST'])
 def play(card_id):
-    xml = '<?xml version="1.0" encoding="UTF-8"?><Response><Play>http://exodia.ngrok.com/static/cards/' + card_id + '.wav</Play><Redirect/></Response>'
+    xml = '<?xml version="1.0" encoding="UTF-8"?><Response><Play>http://crowdsmile.ngrok.com/static/cards/' + card_id + '.wav</Play><Redirect/></Response>'
     return Response(xml, mimetype='text/xml')
 
 
@@ -128,7 +133,7 @@ def test():
     call = client.calls.create(
         to="+447933225896",
         from_="+441228830148",
-        url="http://exodia.ngrok.com/play/2"
+        url="http://crowdsmile.ngrok.com/play/2"
     )
     return 'OK'
 '''
@@ -147,7 +152,7 @@ def receive():
         cursor = get_db().cursor()
         cursor.execute("INSERT INTO users(phone, city, happines) VALUES(?, ?, ?)", (from_number, city, happines))
         get_db().commit()
-        return 'OK'
+    return 'OK'
 
 
 # Upload a happy person's audio
@@ -161,7 +166,7 @@ def audio(card_id):
         filename = audio_file.filename
         print filename
         
-        directory = 'cards/' + card_id
+        directory = 'static/cards/' + card_id
         if not exists(directory):
             print 'Directory', directory, 'does not exist yet.'
             makedirs(directory)
@@ -182,7 +187,7 @@ def audio(card_id):
             sound1 = AudioSegment.from_file(directory + "/sound1.wav")
             sound2 = AudioSegment.from_file(directory + "/sound2.wav")
             sound3 = AudioSegment.from_file(directory + "/sound3.wav")
-            
+
             combined1 = sound1.overlay(sound2)
             combined2 = combined1.overlay(sound3)
 
@@ -198,7 +203,7 @@ def audio(card_id):
                 call = client.calls.create(
                     to=user['phone'],
                     from_="+441228830148",
-                    url="http://exodia.ngrok.com/play/" + card_id
+                    url="http://crowdsmile.ngrok.com/play/" + card_id
                 )
 
                 get_db().cursor().execute("delete from users where id='%d'" % user['id'])
